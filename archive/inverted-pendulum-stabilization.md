@@ -103,7 +103,7 @@ A = \begin{bmatrix}
 \end{bmatrix}
 $$
 
-![Figure 7.2: A simple mass / spring / damper system](<../.gitbook/assets/image (2).png>)
+![Figure 7.2: A simple mass / spring / damper system](<../.gitbook/assets/image (20).png>)
 
 Choose the weighting matrices as
 
@@ -217,17 +217,17 @@ The purpose of this experiment is to design a balance control using the principl
 
 In this lab, we demonstrate a control design using modern “state-space” methods. The plant consists of an inverted pendulum on a cart.  The plant has two distinct equilibrium points of which one is stable and the other is unstable. In this experiment, we will show how the plant in its unstable configuration can be controlled using a suitable controller. The methodology used to design the control law is based on the linear quadratic regulator (LQR) theory. The inverted pendulum mechanism to be used in this lab is shown in Fig. 7.3.
 
-![Figure 7.3: Inverted Pendulum mechanism in the lab](<../.gitbook/assets/image (102).png>)
+![Figure 7.3: Inverted Pendulum mechanism in the lab](<../.gitbook/assets/image (88).png>)
 
 ### Mathematical Model of the Inverted Pendulum Mechanism
 
 Consider an inverted pendulum of mass $$m_p$$ and length $$2l_p$$ connected on a sliding cart of mass $$m_c$$ as shown in Fig. 7.4.
 
-![Figure 7.4: Inverted pendulum mechanism](<../.gitbook/assets/image (120).png>)
+![Figure 7.4: Inverted pendulum mechanism](<../.gitbook/assets/image (37).png>)
 
 The angle $$\theta$$ is measured from the up-right position. We can apply a force to the cart through the cartwheel motors. We wish to design a controller to balance the pendulum to the upright position $$\theta=0$$. Note that the problem of balancing a pendulum is akin to the problem of stabilizing a rocket during ascent.
 
-![Figure 7.5: Powered rocket during ascent](<../.gitbook/assets/image (51).png>)
+![Figure 7.5: Powered rocket during ascent](<../.gitbook/assets/image (62).png>)
 
 The equations of motion for the system can be easily derived using the free-body diagrams shown in Fig. 7.6 as follows (here we assume that the track on which the cart moves without sliding):
 
@@ -243,7 +243,7 @@ $$
 
 where $$I$$ is the moment of inertia about the pendulum's mass center given by $$I=\cfrac{m_pl_p^2}{3}$$.
 
-![Figure 7.6: Free Body Diagrams](<../.gitbook/assets/image (78).png>)
+![Figure 7.6: Free Body Diagrams](<../.gitbook/assets/image (65).png>)
 
 This system has two equilibria $$(\dot{x}=\ddot{x}=\dot{\theta}=\ddot{\theta}=0)$$ which are $$(x_{e1},\theta_{e1})=(0,\pi)$$ and $$(x_{e2}, \theta_{e2})=(0,0)$$.&#x20;
 
@@ -418,7 +418,7 @@ Further tuning of $$R$$ and $$Q$$ may be required for improving the controller p
 
 The block diagram of the experimental setup in the lab is shown in Fig. 7.7.
 
-![Fig 7.7: Block diagram of the experimental set-up](<../.gitbook/assets/image (112).png>)
+![Fig 7.7: Block diagram of the experimental set-up](<../.gitbook/assets/image (99).png>)
 
 (Note: Conventional error signal shown, but $$u=-K\Delta X, \Delta X=X-X_C$$)
 
@@ -466,7 +466,7 @@ CAUTION: Always be ready to stop the experiment if the cart goes unstable. This 
 2.  Open the MATLAB and locate the file **InvPendulum\_LQR.mdl** under the path **C:\AE4610\_Controls\_Lab\Inverted\_Pendulum** and open it. This is the block diagram for this part of the experiment.
 
 
-3.  To build the model, click the down arrow on **Monitor & Tune** under the Hardware tab and then click **Build** **for monitoring** ![](<../.gitbook/assets/image (39).png>). This generates the controller code.
+3.  To build the model, click the down arrow on **Monitor & Tune** under the Hardware tab and then click **Build** **for monitoring** ![](<../.gitbook/assets/image (117).png>). This generates the controller code.
 
 
 4.  Switch the Command Signal block to 0.
@@ -481,7 +481,7 @@ CAUTION: Always be ready to stop the experiment if the cart goes unstable. This 
 7.  Double click on the scopes and open then.
 
 
-8.  Press **Connect** <img src="../.gitbook/assets/image (61).png" alt="" data-size="line"> button under Monitor & Tune and then press **Start** <img src="../.gitbook/assets/image (48).png" alt="" data-size="line"> **** .
+8.  Press **Connect** <img src="../.gitbook/assets/image (121).png" alt="" data-size="line"> button under Monitor & Tune and then press **Start** <img src="../.gitbook/assets/image (119).png" alt="" data-size="line"> **** .
 
 
 9.  Gently disturb the pendulum to see the effect of the controller and then stop the simulation.

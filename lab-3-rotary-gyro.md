@@ -1,6 +1,6 @@
 # Lab 4: Rotary Gyro
 
-## =-ntroduction
+## Introduction
 
 The objective of this experiment is to design a controller that maintains the direction of the gyroscope module while the top base plate is rotated relative to the bottom base plate. While the disk spins, the SRV02 is used to apply the correct amount of counter torque and maintain the gyroscope heading in the event of disturbances (i.e., rotation of the bottom support plate).
 
@@ -46,8 +46,5 @@ and notice that either a change in magnitude of the angular moment or a change i
 
 ### Servo Model
 
-The Servo Base Unit (SRV02) open-loop transfer function is given by
+The Servo Base Unit (SRV02) open-loop transfer function is given by&#x20;
 
-$$
-f(x) = x * e^{2 pi i \xi x}
-$$

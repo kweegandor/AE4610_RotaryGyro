@@ -31,9 +31,9 @@ Make sure to do the following: \
 It is <mark style="color:orange;">**critical**</mark> that you read following two pdf files to know how to use **MATLAB** and **SIMULINK** to perform well in this course.
 {% endhint %}
 
-{% file src=".gitbook/assets/Helpful MATLAB Stuff.pdf" %}
+{% file src=".gitbook/assets/Helpful Matlab Stuff.pdf" %}
 
-{% file src=".gitbook/assets/SIMULINK Tutorial.pdf" %}
+{% file src=".gitbook/assets/SimulinkTutorial.pdf" %}
 
 
 
@@ -394,7 +394,7 @@ $$F_x = 1000\,u_X + \displaystyle{\frac{-200 \times 5000}{\sqrt{ (200)^2+ (200)^
 
 
 
-![](<.gitbook/assets/P8 (1).png>)
+![](.gitbook/assets/P8.png)
 
 ## Quanser
 
@@ -404,7 +404,7 @@ Before we have the experiments in-person, you will get to know how Quanser devic
 
 The digital twin or simulation works by emulating Q8-USB (the actual Data Acquisition device in our lab) using localhost.
 
-The information on the equipment setup can be found in next [Lab 1: Rotary Servo Base](lab-1-rotary-servo-base/a.-integration-week-1.md). Refer to Lab 1 to check how DC motor, encoder, and potentiometer works.
+The information on the equipment setup can be found in next [Lab 1: Rotary Servo Base](lab-1-rotary-servo-base/1.-integration-week-1.md). Refer to Lab 1 to check how DC motor, encoder, and potentiometer works.
 
 1. Use Georgia Tech AE Computers or visit [https://mycloud.gatech.edu/](https://mycloud.gatech.edu/) to remotely login into AE-2023 desktop. For those using mycloud, you can either install Citrix or use the light version to use the web-based service.
 2. Open the Quanser Interactive Lab program and log in using the account you have registered at the beginning of the Lab 0.\
@@ -417,7 +417,7 @@ The information on the equipment setup can be found in next [Lab 1: Rotary Servo
 5. First complete the SIMULINK model as stated in the annotations (green box): add a gain block to convert count to degree (refer to hint at the end for specification) and add two To Workspace blocks for each encoder (degree) and potentiometer (Voltage) to save the data in the MATLAB workspace.\
    \
    ![](.gitbook/assets/q.png)
-6. Run the simulation by clicking the run button ![](.gitbook/assets/run.png) in Simulation Tab. Then 3 scopes will open up and plot real-time values as the simulation runs. If following error occurs: <mark style="color:red;">"Error reported by S-function 'hil\_initialize\_block' in 'Rotary\_servo\_quick\_start/HIL\_Initialize ",</mark> close and re-open QLabs and open Servo Base Workspace again.
+6. Run the simulation by clicking the run button ![](<.gitbook/assets/run (1).png>) in Simulation Tab. Then 3 scopes will open up and plot real-time values as the simulation runs. If following error occurs: <mark style="color:red;">"Error reported by S-function 'hil\_initialize\_block' in 'Rotary\_servo\_quick\_start/HIL\_Initialize ",</mark> close and re-open QLabs and open Servo Base Workspace again.
 7. Once the simulation has ended, save the variables in the MATLAB workspace. You can either right-click on the blank space in MATLAB Workspace or type **`save('filename')`** and run it. Make sure you name the file as Sine\_Input or something unique that you can distinguish from other inputs.
 8. Now you will try with different inputs. Repeat steps 6-7 with unit step input (with step time 0, this is the time when you command input), square wave generator input (default values should work), and chirp input (change the target time to 5 seconds). Save each with a different filename.
 
@@ -429,7 +429,7 @@ The encoder is set to quadratic mode which will have 4096 counts per one full re
 
 ### Quanser SIMULINK Model File
 
-{% file src=".gitbook/assets/rotary_servo.slx" %}
+{% file src=".gitbook/assets/rotary_servo (1).slx" %}
 
 ## Appendix
 

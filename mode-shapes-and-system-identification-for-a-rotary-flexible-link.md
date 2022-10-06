@@ -4,7 +4,7 @@
 
 The purpose of this experiment is to understand the existence of vibrations in a rotary flexible link and the resulting mode shapes. Any beam-like structure exhibits vibrations either due to external changing loads or due to reorientation via actuators. The experiment deals with the modeling and identification of modal frequencies and mode shapes of free vibrations for a rotary flexible link. This analysis is particularly useful to understand structural vibrations and modes and how to contain them in real-world applications like aircraft and spacecraft structures as well as robotic links/manipulators.
 
-![Image Credit: Quanser](<.gitbook/assets/image (121).png>)
+![Image Credit: Quanser](<.gitbook/assets/image (7).png>)
 
 ## Equipment Required
 
@@ -30,7 +30,7 @@ This experiment involves system identification and modeling of the flexible link
 
 This experiment is performed using the Quanser Rotary Flexible Link mounted on an SRV-02 servo motor.  This system, shown in Fig. 1, consists of an electromechanical plant, where a flexible link is rotated using a servo motor. The base of the flexible link is mounted on the load gear of the servo motor system. The servo angle, $$\theta$$, increases positively when it rotates counter-clockwise (CCW). The servo (and thus the link) turn in the CCW direction when the control voltage is positive, i.e., $$V_m>0$$ .
 
-![Figure 1. Rotary Flexible Link Setup](<.gitbook/assets/image (99).png>)
+![Figure 1. Rotary Flexible Link Setup](<.gitbook/assets/image (71).png>)
 
 The main components of the setup are labeled in Figs. 2 and 3 and are listed in Table 1.
 
@@ -48,21 +48,21 @@ The main components of the setup are labeled in Figs. 2 and 3 and are listed in 
 | 8   | OFFSET Potentiometer      |
 | 9   | GAIN Potentiometer        |
 
-![Figure 2. FLEXGAGE coupled to SRV02](<.gitbook/assets/image (19).png>)
+![Figure 2. FLEXGAGE coupled to SRV02](<.gitbook/assets/image (59).png>)
 
-![Figure 3. Strain Gauge Closeup](<.gitbook/assets/image (119).png>)
+![Figure 3. Strain Gauge Closeup](<.gitbook/assets/image (27).png>)
 
 The FLEXGAGE module consists of the strain gauge, the strain gauge circuitry, and a sensor connector. The flexible link is attached to this module and the strain gauge is fixed at the root of the link. The module is mounted onto the servo motor, which is the actuator for this system. The strain gauge sensor produces an analog signal proportional to the deflection of the link tip.
 
 The link can be schematically represented as shown in Fig. 4. The flexible link has a total length of $$L_1$$, a mass of $$m_1$$, and its moment of inertia about the center of mass is $$a = J_1$$ . The deflection angle of the link is denoted as $$\alpha$$ and increases positively when rotated CCW.
 
-![Figure 4. Rotary Flexible Link Angles](<.gitbook/assets/image (66).png>)
+![Figure 4. Rotary Flexible Link Angles](<.gitbook/assets/image (105).png>)
 
 The complete flexible link system can be represented by the diagram shown in Fig. 5. The control variable is the input servo motor voltage, $$V_m$$ which is proportional to the angular rate of the servo motor. This generates a torque $$\tau$$, at the load gear of the servo that rotates the base of the link, which is given by                                                $$\tau=\displaystyle{\frac{\eta_g K_g\eta_mk_t(V_m-K_gk_m\dot{\theta})}{R_m}}=C_1V_m-C_2\dot{\theta} \tag{1.1}$$​
 
 where the various constants are SRV02 parameters which are mentioned in Table 2.
 
-![Figure 5. Rotary Flexible Link Model](<.gitbook/assets/image (70).png>)
+![Figure 5. Rotary Flexible Link Model](<.gitbook/assets/image (83).png>)
 
 The viscous friction coefficient of the servo is denoted by $$B_{\rm eq}$$. This is the friction that opposes the torque being applied at the servo load gear. $$J_{\rm eq}$$ represents the moment of inertia of the SRV02 when there is no load. The friction acting on the link is represented by the viscous damping coefficient $$B_l$$. The flexible link is modeled as a linear spring with the stiffness $$K_s$$ and with moment of inertia $$J_l$$ .
 
@@ -114,7 +114,7 @@ Assuming the initial conditions $$\alpha(0)=\alpha_0$$ and $$\dot{\alpha}(0)=0$$
 
 &#x20;                                                                                                                               $$\displaystyle{ A(s)={\frac{\displaystyle{\frac{\alpha_0}{J_l}}}{\displaystyle{s^2+\frac{B_l}{J_l}s+\frac{K_s}{J_l}}}}} \tag{1.7}$$           &#x20;
 
-![Figure 6. Free Oscillation Response](<.gitbook/assets/image (54).png>)
+![Figure 6. Free Oscillation Response](<.gitbook/assets/image (78).png>)
 
 The prototype characterisitic equation for a second-order system is defined as
 
@@ -157,7 +157,7 @@ and the undamped natural frequency is                    $$\displaystyle{\omega_
 1.  Download and open **FlexLink\_FreeOsc\_Q2\_USB.slx**. This is the block diagram for this part of the experiment.
 
 
-2.  To build the model, click the down arrow on **Monitor & Tune** under the Hardware tab and then click **Build** **for monitoring** ![](<.gitbook/assets/image (39).png>). This generates the controller code.
+2.  To build the model, click the down arrow on **Monitor & Tune** under the Hardware tab and then click **Build** **for monitoring** ![](<.gitbook/assets/image (117).png>). This generates the controller code.
 
 
 3.  Open the scope **alpha**.
@@ -166,10 +166,10 @@ and the undamped natural frequency is                    $$\displaystyle{\omega_
 4.  Turn on the power supply.
 
 
-5.  Press **Connect** <img src=".gitbook/assets/image (61).png" alt="" data-size="line"> button under Monitor & Tune and hold on to the base to prevent any rotation at the root.
+5.  Press **Connect** <img src=".gitbook/assets/image (121).png" alt="" data-size="line"> button under Monitor & Tune and hold on to the base to prevent any rotation at the root.
 
 
-6.  Press **Start** <img src=".gitbook/assets/image (48).png" alt="" data-size="line"> **** and immediately perturb the flexible link. Keep holding the base until the data is collected for the complete run (5 seconds).
+6.  Press **Start** <img src=".gitbook/assets/image (119).png" alt="" data-size="line"> **** and immediately perturb the flexible link. Keep holding the base until the data is collected for the complete run (5 seconds).
 
 
 7.  Save the link deflection angle data for the free oscillation using the format **FreeOsc\_1** to your folder.
@@ -346,7 +346,7 @@ $$m$$ is mass per unit length
 
 The mode shapes of a uniform cantilever beam are shown in Fig. 7.
 
-![Figure 7. First three mode shapes of a uniform cantilever beam.](<.gitbook/assets/image (71).png>)
+![Figure 7. First three mode shapes of a uniform cantilever beam.](<.gitbook/assets/image (84).png>)
 
 In order to determine the modal frequencies and mode shapes, the corresponding frequencies can be excited by providing a sinusoidal input to the link via external means. When the frequency of the input coincides with either the fundamental frequency or higher frequency modes, the corresponding modes will be excited due to resonance and their mode shapes can be observed physically. Hence, the following experiment involves a frequency sweep across a range provided as input to the flexible link via the servo motor to identify the frequencies and observe the corresponding mode shapes.
 
@@ -359,7 +359,7 @@ In order to determine the modal frequencies and mode shapes, the corresponding f
 1.  Download and open **FlexLink\_ExciteMode.mdl**
 
 
-2.  To build the model, click the down arrow on **Monitor & Tune** under the Hardware tab and then click **Build** **for monitoring** ![](<.gitbook/assets/image (39).png>). This generates the controller code.
+2.  To build the model, click the down arrow on **Monitor & Tune** under the Hardware tab and then click **Build** **for monitoring** ![](<.gitbook/assets/image (117).png>). This generates the controller code.
 
 
 3.  Open the scope **alpha**.
@@ -374,7 +374,7 @@ In order to determine the modal frequencies and mode shapes, the corresponding f
 6.  Open the **Chirp signal** command block and make sure that the Initial frequency is **0.1 Hz**, the target time is **0.25 s** and the Frequency at target time is **0.2 Hz**. This will allow the frequency sweep to take place at a reasonable rate and ensure that the relevant frequencies are covered within the span of time.
 
 
-7.  Press the **Connect** <img src=".gitbook/assets/image (61).png" alt="" data-size="line"> button under Monitor & Tune **** and click on **Start** <img src=".gitbook/assets/image (48).png" alt="" data-size="line">. Run the servo motor with the chirp input voltage for 60 seconds.
+7.  Press the **Connect** <img src=".gitbook/assets/image (121).png" alt="" data-size="line"> button under Monitor & Tune **** and click on **Start** <img src=".gitbook/assets/image (119).png" alt="" data-size="line">. Run the servo motor with the chirp input voltage for 60 seconds.
 
 
 8. Save the data using the format **Osc\_ChirpSignal** into your folder. **DO NOT DELETE THE SIMULINK MODEL**.
@@ -395,7 +395,7 @@ In order to determine the modal frequencies and mode shapes, the corresponding f
 1.  Again, open the **FlexLink\_ExciteMode.mdl** simulink file used in part 2.
 
 
-2.  To build the model, click the down arrow on **Monitor & Tune** under the Hardware tab and then click **Build** **for monitoring** ![](<.gitbook/assets/image (39).png>). This generates the controller code.
+2.  To build the model, click the down arrow on **Monitor & Tune** under the Hardware tab and then click **Build** **for monitoring** ![](<.gitbook/assets/image (117).png>). This generates the controller code.
 
 
 3.  Open the scope **alpha**.
@@ -410,7 +410,7 @@ In order to determine the modal frequencies and mode shapes, the corresponding f
 6.  Open the **Sine wave** signal command block and make sure that the Amplitude is **3** and Phase is **0 rad**. Enter the first modal frequency determined from the calculations in **rad/sec**.
 
 
-7.  Press **Connect** <img src=".gitbook/assets/image (61).png" alt="" data-size="line"> button under Monitor & Tune **** and Press **Start** <img src=".gitbook/assets/image (48).png" alt="" data-size="line">. Run the servo motor with the sine wave for at least 20 seconds.
+7.  Press **Connect** <img src=".gitbook/assets/image (121).png" alt="" data-size="line"> button under Monitor & Tune **** and Press **Start** <img src=".gitbook/assets/image (119).png" alt="" data-size="line">. Run the servo motor with the sine wave for at least 20 seconds.
 
 
 8.  Tune the frequency value by increasing or decreasing in steps of 1 rad/sec until the first mode shape is clearly visible.

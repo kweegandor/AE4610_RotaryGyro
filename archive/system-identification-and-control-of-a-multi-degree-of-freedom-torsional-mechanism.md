@@ -21,7 +21,7 @@ The objectives of this laboratory experiment are as follows:
 
 Implementing a suitable controller on a 2-disk (2 DOF) system, where the feedback is based on the angular displacement $$\theta_3$$ of the upper disk is referred to as **non-collocated** since the sensor output and the actuator input are at different locations. The addition of the spring and the second inertia to the rigid body single DOF increases the plant order by two and adds an oscillatory mode to the plant dynamics. This may be thought of, in a sense, as a dynamic disturbance to the rigid body plant (single DOF).
 
-![Image source: https://www.phywe.com/en/torsional-vibrations-and-torsion-modulus.html](<../.gitbook/assets/image (29).png>)
+![Image source: https://www.phywe.com/en/torsional-vibrations-and-torsion-modulus.html](<../.gitbook/assets/image (6).png>)
 
 ## Equipment Required
 
@@ -44,7 +44,7 @@ This part of the experiment involves the first phase – system identification a
 
 A schematic of the plant interconnection with the control computer is shown in Fig. 4.1-(b). The plant is shown in Fig. 4.1-(a). It consists of three disks supported by a torsionally flexible shaft which is suspended vertically on anti-friction ball bearings. The shaft is driven by a brushless servo motor connected via a rigid belt and pulley system with a 3:1 speed reduction ratio. An encoder located on the motor is used for commutation. This is the process by which the current is distributed to the motor coils. In order to commutate the motor, a sensor connected to the motor shaft is used to feedback the instantaneous rotor position. The encoder on the base of the shaft measures the angular displacement (in counts) which is converted to an angle $$\theta_1$$ of the lower disk $$J_1$$ . The second disk $$J_2$$ is connected to its encoder, which measures $$\theta_2$$, by a belt/pulley with a 1:1 pulley ratio and similarly the third disk $$J_3$$ is connected to its encoder (which measures $$\theta_3$$) by a rigid belt/pulley with a 1:1 pulley ratio.
 
-![Figure 4.1. Experimental control system](<../.gitbook/assets/image (49).png>)
+![Figure 4.1. Experimental control system](<../.gitbook/assets/image (60).png>)
 
 The plant may be placed in a variety of free and clamped configurations with 1, 2, and 3 degrees of freedom. For 1 and 2 DOF plants, the torsional spring constant $$k_1$$ may be halved by the choice of disk location. Changing configuration often requires removing or replacing inertia disks. Although these operations are straightforward, it is recommended that they are performed with care. The user may change inertia values by changing the number of masses and/or their location on a given disk.
 
@@ -86,7 +86,7 @@ $$
 t_2 = T_d + t_1, \space \text{with} \space T_d = \frac{2\pi}{\omega_d}
 $$
 
-![Figure 4.2. Calculation of the logarithmic decrement](<../.gitbook/assets/image (10).png>)
+![Figure 4.2. Calculation of the logarithmic decrement](<../.gitbook/assets/image (66).png>)
 
 Since
 
@@ -205,7 +205,7 @@ $$
 
 2.  Secure four 500g masses on the upper and lower disks. Verify that the masses are secured properly and that centerline of each mass is at **** a distance of 9.0 cm from the shaft centerline.
 
-    &#x20;                                           <img src="../.gitbook/assets/image (95).png" alt="" data-size="original">&#x20;
+    &#x20;                                           <img src="../.gitbook/assets/image (39).png" alt="" data-size="original">&#x20;
 
     &#x20;                                      **Figure 4.3. Electromechanical plant model 205a**
 
@@ -282,15 +282,15 @@ This part of the experiment involves the second phase – the development of PD 
 
 The configuration of the torsional mechanism that will be used for controller design and evaluation is shown in Fig. 4.4.&#x20;
 
-![Figure 4.4. Configuration of the torsional mechanism used for controller design and evaluation](<../.gitbook/assets/image (59).png>)
+![Figure 4.4. Configuration of the torsional mechanism used for controller design and evaluation](<../.gitbook/assets/image (74).png>)
 
 In this configuration, the center disk is removed and two masses are added to both top and bottom disks.&#x20;
 
 ### Theoretical Background
 
-![Figure 4.5. Free-free two DOF torsional plant](<../.gitbook/assets/image (41).png>)
+![Figure 4.5. Free-free two DOF torsional plant](<../.gitbook/assets/image (35).png>)
 
-![Figure 4.6. Free body diagram of the lower disk (left) and upper disk (right)](<../.gitbook/assets/image (36).png>)
+![Figure 4.6. Free body diagram of the lower disk (left) and upper disk (right)](<../.gitbook/assets/image (106).png>)
 
 ### Equations of Motion
 
@@ -314,7 +314,7 @@ where
 * $$V$$ = applied voltage
 * $$k_{VT}$$, gain that converts volts to torque in N-m, is calculated as follows (see Fig. 4.7):
 
-![Figure 4.7. Computing the gain k\_VT](<../.gitbook/assets/image (33).png>)
+![Figure 4.7. Computing the gain k\_VT](<../.gitbook/assets/image (45).png>)
 
 $$
 k_{VT} = k_a \cdot k_t \cdot k_p \tag{4.10}
@@ -412,7 +412,7 @@ where $$\theta_1$$ is the lower disk displacement and $$T$$ is the input torque 
 
 The approach in this experiment will be to design the controller by interactively changing the PD gains and observing their effect on the physical system.
 
-![Figure 4.8. Closed-loop block diagram of the torsional plant with a PD controller - collocated control](<../.gitbook/assets/image (45).png>)
+![Figure 4.8. Closed-loop block diagram of the torsional plant with a PD controller - collocated control](<../.gitbook/assets/image (4).png>)
 
 ### Specifications & Procedure
 
@@ -481,7 +481,7 @@ You must have your work checked out by one of the TAs before leaving the lab to 
 
 2.  Enter the program by clicking on the shortcut to 3D Torsion on the desktop and turn on the torsional mechanism.
 
-    &#x20;                                            <img src="../.gitbook/assets/image.png" alt="" data-size="original">&#x20;
+    &#x20;                                            <img src="../.gitbook/assets/image (18).png" alt="" data-size="original">&#x20;
 
     &#x20;     **Figure 4.9. Electromechanical plant model 205a configured for closed loop experiments**
 3.  Enter **File** menu, choose **Load Setting** and select the file **C:\Program Files (x86)\ECP Systems\cn\default.cfg**.

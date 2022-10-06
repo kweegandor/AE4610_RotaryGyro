@@ -4,7 +4,7 @@
 
 The Quanser Aero Experiment can be configured as a conventional dual-rotor helicopter, as shown in Figure 1. The front rotor that is horizontal to the ground predominantly affects the motion about the pitch axis while the back or tail rotor mainly affects the motion about the yaw axis (about the shaft).
 
-![Fig. 1: Quanser Aero Experiment](<../.gitbook/assets/image (110).png>)
+![Fig. 1: Quanser Aero Experiment](<../.gitbook/assets/image (16).png>)
 
 The tail rotor in helicopters is also known as the anti-torque rotor because it is used to reduce the torque that the main rotor generates about the yaw. Without this, the helicopter would be difficult to stabilize about the yaw axis. Because the rotors on the Quanser Aero Experiment are the same size and equidistant from each other, the tail rotor also generates a torque about the pitch axis. As a result, both the front and back/tail rotors generate a torque on each other.
 
@@ -14,7 +14,7 @@ The tail rotor in helicopters is also known as the anti-torque rotor because it 
 
 The free-body diagram of the Quanser Aero Experiment is illustrated in Figure 2.
 
-![Fig. 2: Simple free-body diagram of Quanser Aero Experiment](<../.gitbook/assets/image (85).png>)
+![Fig. 2: Simple free-body diagram of Quanser Aero Experiment](<../.gitbook/assets/image (58).png>)
 
 The following conventions are used for the modeling:
 
@@ -86,7 +86,7 @@ $$y(t_1)=y_1=(1-e^{-1})(y_{\rm ss}-y_0) \tag{8a}$$
 
 The time constant is $$\tau=t_1-t_{0 }$$, where $$t_0$$ is the start time of the step and $$t_1$$ is the time it takes to reach&#x20;63% of the final value, as illustrated in Figure 3.
 
-![Fig. 3.a : First-order step response](<../.gitbook/assets/image (91).png>)
+![Fig. 3.a : First-order step response](<../.gitbook/assets/image (14).png>)
 
 To find the time constant from first-order response from an impulse (or short step) as depicted in Figure 4, find the time it takes for the response to reach $$e^{-1}$$ or 37% of its final steady-state value.&#x20;
 
@@ -138,7 +138,7 @@ The damping ratio of a second-order system can be found from its response. For a
 
 &#x20;                                                                            $$\delta = \displaystyle\frac{1}{n-1}\ln\frac{O_1}{O_n} \tag{17}$$&#x20;
 
-![Fig. 4: Free Oscillation Response](<../.gitbook/assets/image (79).png>)
+![Fig. 4: Free Oscillation Response](<../.gitbook/assets/image (96).png>)
 
 where $$O_1$$ is the peak of the first oscillation and $$O_n$$ is the peak of the $$n^{th}$$ oscillation. Note that $$O_1$$ > $$O_n$$ ,&#x20;as this is a decaying response. The damping ratio can then be found using
 
@@ -248,9 +248,9 @@ First download the zip file below and extract it in the desktop:
 
 4\) Select simulation time 30 sec.
 
-5\) To build the model, click the down arrow on **Monitor & Tune** under the Hardware tab and then click **Build** **for monitoring** ![](<../.gitbook/assets/image (39).png>). This generates the controller code.
+5\) To build the model, click the down arrow on **Monitor & Tune** under the Hardware tab and then click **Build** **for monitoring** ![](<../.gitbook/assets/image (117).png>). This generates the controller code.
 
-6\) Click **Connect** <img src="../.gitbook/assets/image (61).png" alt="" data-size="line"> button under **Monitor & Tune** and then run SIMULINK by clicking **Start** <img src="../.gitbook/assets/image (48).png" alt="" data-size="line">.
+6\) Click **Connect** <img src="../.gitbook/assets/image (121).png" alt="" data-size="line"> button under **Monitor & Tune** and then run SIMULINK by clicking **Start** <img src="../.gitbook/assets/image (119).png" alt="" data-size="line">.
 
 7\) Copy _`aero_pitch_free_osc_rsp.mat`_ to your folder. \
 \
@@ -273,9 +273,9 @@ Data is saved in following order:\
 
 3\) Select simulation time 30 sec.
 
-4\) To build the model, click the down arrow on **Monitor & Tune** under the Hardware tab and then click **Build** **for monitoring** ![](<../.gitbook/assets/image (39).png>). This generates the controller code.
+4\) To build the model, click the down arrow on **Monitor & Tune** under the Hardware tab and then click **Build** **for monitoring** ![](<../.gitbook/assets/image (117).png>). This generates the controller code.
 
-5\) Click **Connect** <img src="../.gitbook/assets/image (61).png" alt="" data-size="line"> button under **Monitor & Tune** and then run SIMULINK by clicking **Start** <img src="../.gitbook/assets/image (48).png" alt="" data-size="line">.
+5\) Click **Connect** <img src="../.gitbook/assets/image (121).png" alt="" data-size="line"> button under **Monitor & Tune** and then run SIMULINK by clicking **Start** <img src="../.gitbook/assets/image (119).png" alt="" data-size="line">.
 
 6\) Copy _`aero_pitch_step_rsp.mat`_ to your folder.\
 \
@@ -305,9 +305,9 @@ Plot below used 20V which caused heli to hit the base. This is seen as the bump 
 
 5\) Select simulation time 10 sec.
 
-6\) To build the model, click the down arrow on **Monitor & Tune** under the Hardware tab and then click **Build** **for monitoring** ![](<../.gitbook/assets/image (39).png>). This generates the controller code.
+6\) To build the model, click the down arrow on **Monitor & Tune** under the Hardware tab and then click **Build** **for monitoring** ![](<../.gitbook/assets/image (117).png>). This generates the controller code.
 
-7\) Click **Connect** <img src="../.gitbook/assets/image (61).png" alt="" data-size="line"> button under **Monitor & Tune** and then run SIMULINK by clicking **Start** <img src="../.gitbook/assets/image (48).png" alt="" data-size="line">.
+7\) Click **Connect** <img src="../.gitbook/assets/image (121).png" alt="" data-size="line"> button under **Monitor & Tune** and then run SIMULINK by clicking **Start** <img src="../.gitbook/assets/image (119).png" alt="" data-size="line">.
 
 8\) Copy _`aero_yaw_free_osc_rsp.mat`_ to your folder\
 \
@@ -331,9 +331,9 @@ Data is saved in following order: \
 
 3\) Select simulation time 40 sec.
 
-4\) To build the model, click the down arrow on **Monitor & Tune** under the Hardware tab and then click **Build** **for monitoring** ![](<../.gitbook/assets/image (39).png>). This generates the controller code.
+4\) To build the model, click the down arrow on **Monitor & Tune** under the Hardware tab and then click **Build** **for monitoring** ![](<../.gitbook/assets/image (117).png>). This generates the controller code.
 
-5\) Click **Connect** <img src="../.gitbook/assets/image (61).png" alt="" data-size="line"> button under **Monitor & Tune** and then run SIMULINK by clicking **Start** <img src="../.gitbook/assets/image (48).png" alt="" data-size="line">.
+5\) Click **Connect** <img src="../.gitbook/assets/image (121).png" alt="" data-size="line"> button under **Monitor & Tune** and then run SIMULINK by clicking **Start** <img src="../.gitbook/assets/image (119).png" alt="" data-size="line">.
 
 6\) Copy _`aero_yaw_step_rsp.mat`_ to your folder\
 \
@@ -360,9 +360,9 @@ Data is saved in following order: \
 
 4\) Select simulation time 40 sec.
 
-5\) To build the model, click the down arrow on **Monitor & Tune** under the Hardware tab and then click **Build** **for monitoring** ![](<../.gitbook/assets/image (39).png>). This generates the controller code.
+5\) To build the model, click the down arrow on **Monitor & Tune** under the Hardware tab and then click **Build** **for monitoring** ![](<../.gitbook/assets/image (117).png>). This generates the controller code.
 
-6\) Click **Connect** <img src="../.gitbook/assets/image (61).png" alt="" data-size="line"> button under **Monitor & Tune** and then run SIMULINK by clicking **Start** <img src="../.gitbook/assets/image (48).png" alt="" data-size="line">.
+6\) Click **Connect** <img src="../.gitbook/assets/image (121).png" alt="" data-size="line"> button under **Monitor & Tune** and then run SIMULINK by clicking **Start** <img src="../.gitbook/assets/image (119).png" alt="" data-size="line">.
 
 {% hint style="info" %}
 A pitch up motion must be seen due to torque from the tail rotor.
@@ -393,9 +393,9 @@ Data is saved in following order: \
 
 3\) Select simulation time 40 sec.
 
-4\) To build the model, click the down arrow on **Monitor & Tune** under the Hardware tab and then click **Build** **for monitoring** ![](<../.gitbook/assets/image (39).png>). This generates the controller code.
+4\) To build the model, click the down arrow on **Monitor & Tune** under the Hardware tab and then click **Build** **for monitoring** ![](<../.gitbook/assets/image (117).png>). This generates the controller code.
 
-5\) Click **Connect** <img src="../.gitbook/assets/image (61).png" alt="" data-size="line"> button under **Monitor & Tune** and then run SIMULINK by clicking **Start** <img src="../.gitbook/assets/image (48).png" alt="" data-size="line">.
+5\) Click **Connect** <img src="../.gitbook/assets/image (121).png" alt="" data-size="line"> button under **Monitor & Tune** and then run SIMULINK by clicking **Start** <img src="../.gitbook/assets/image (119).png" alt="" data-size="line">.
 
 {% hint style="info" %}
 A yaw motion must be seen due to torque from front motor.
@@ -454,7 +454,7 @@ $$D=\begin{bmatrix} 0&0\\ 0&0 \\ 0&0\\  0 &  0\end{bmatrix} \tag{41.d}$$        
 
 In this section, a state-feedback controller is designed to regulate the pitch and yaw angles of the Quanser Aero Experiment to desired _angles._ Using the previous state-space model, we can find a control gain  $$K$$ based on the coupled dynamics to stabilize the system. The control gains are computed using **Linear-Quadratic Regulator (LQR)** theory. The general state-feedback control is illustrated in Figure 11. The state-feedback controller is defined
 
-![Fig. 11: Model used to acquire free-oscillation response about pitch](<../.gitbook/assets/image (83).png>)
+![Fig. 11: Model used to acquire free-oscillation response about pitch](<../.gitbook/assets/image (61).png>)
 
 &#x20;                                                                            $$u=K(x_d-x) \tag{42}$$                                                                    &#x20;
 
@@ -577,7 +577,7 @@ Download the file into the quanser\_aero folder that was used for Week 1.
 
 {% file src="../.gitbook/assets/q_aero_2dof_lqr_control.slx" %}
 
-![Fig. 12: SIMULINK model used to run LQR controller](<../.gitbook/assets/image (89).png>)
+![Fig. 12: SIMULINK model used to run LQR controller](<../.gitbook/assets/image (52).png>)
 
 ### Desired Closed-Loop Response Specifications
 
@@ -596,8 +596,8 @@ Download the file into the quanser\_aero folder that was used for Week 1.
 2. Open _q\_aero\_2dof\_lqr\_control SIMULINK file._
 3. Use the gain $$K$$ obtained in Part B. neglecting the coupling effect.
 4. Use pitch command (10 deg) only by changing Amp\_y to zero.
-5. To build the model, click the down arrow on **Monitor & Tune** under the Hardware tab and then click **Build** **for monitoring** ![](<../.gitbook/assets/image (39).png>). This generates the controller code.
-6. Click **Connect** <img src="../.gitbook/assets/image (61).png" alt="" data-size="line"> button under **Monitor & Tune** and then run SIMULINK by clicking **Start** <img src="../.gitbook/assets/image (48).png" alt="" data-size="line">.
+5. To build the model, click the down arrow on **Monitor & Tune** under the Hardware tab and then click **Build** **for monitoring** ![](<../.gitbook/assets/image (117).png>). This generates the controller code.
+6. Click **Connect** <img src="../.gitbook/assets/image (121).png" alt="" data-size="line"> button under **Monitor & Tune** and then run SIMULINK by clicking **Start** <img src="../.gitbook/assets/image (119).png" alt="" data-size="line">.
 7. Copy _`aerolqrrsp.mat`_ to your own folder and rename it as nocouple\_pitch\_only.
 8. Examine the obtained closed-loop response and see if it matches the desired specifications.
 

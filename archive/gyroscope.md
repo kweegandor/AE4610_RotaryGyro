@@ -11,7 +11,7 @@ description: >-
 
 The purpose of this experiment is to design a controller that maintains the direction of a gyroscope under base excitation. The controller can also be used to rotate the gyro platform to a desired orientation using the gyroscopic principle.&#x20;
 
-![Image credit: NASA](<../.gitbook/assets/image (77).png>)
+![Image credit: NASA](<../.gitbook/assets/image (67).png>)
 
 ## Equipment Required
 
@@ -32,17 +32,17 @@ The purpose of this experiment is to design a controller that maintains the dire
 
 This experiment will be performed using the Model 750 Control Gyroscope.  The system, shown in Fig. 3.1, consists of an electromechanical plant and a full complement of control hardware and software.  The user interface to the system is via an easy-to-use PC-based environment that supports a broad range of controller specification, trajectory generation, data acquisition and plotting features.  A picture of the setup including the DSP card and input/output electronics is shown in Fig. 3.2.
 
-![Figure 3.1: The Model 750 Control Moment Gyroscope](<../.gitbook/assets/image (24).png>)
+![Figure 3.1: The Model 750 Control Moment Gyroscope](<../.gitbook/assets/image (47).png>)
 
 ### Description of the Gyroscope
 
 The gyroscope consists of a high inertia brass rotor suspended in an assembly with four angular degrees of freedom, as seen in Fig. 3.3.  The rotor spin torque is provided by a rare Earth magnet type DC motor (Motor #1), whose angular position is measured by an optical encoder (Encoder #1) with a resolution of 2,000 counts per revolution.  The motor drives the rotor through a 10:3 gear reduction ratio, which amplifies both the torque and encoder resolution by this factor.  The first transverse gimbal assembly (body C) is driven by another rare Earth magnet motor (Motor #2) to effect motion about Axis #2.  The motor drives a 6.1:1 capstan to amplify the torque between the adjoining bodies C and B.  A 1000 line encoder (Encoder #2) with 4x interpolation is mounted on the motor to provide feedback of the relative position between bodies C and B with resolution of 24,400 counts per revolution.
 
-![Figure 3.2:  The Gyroscope Control System Setup](<../.gitbook/assets/image (64).png>)
+![Figure 3.2:  The Gyroscope Control System Setup](<../.gitbook/assets/image (30).png>)
 
 The subsequent gimbal assembly, body B, rotates with respect to body A about Axis #3.  There is no active torque applied about this axis.  A brake, which is actuated via a toggle switch on the Controller box, may be used to lock the relative position between bodies A and B and hence reduce the system's degrees of freedom.  The relative angle between A and B is measured by Encoder #3 with a resolution of 16,000 counts per revolution.  Finally, body A rotates without actively applied torque relative to the base frame (inertial ground) along Axis #4.  The Axis #4 brake is controlled similar to the Axis #3 brake and the relative angle between body A and the base frame is measured by an optical encoder (Encoder #4) with a resolution of 16,000 counts per revolution.
 
-![Figure 3.3: Control Moment Gyroscope Apparatus](<../.gitbook/assets/image (52).png>)
+![Figure 3.3: Control Moment Gyroscope Apparatus](<../.gitbook/assets/image (77).png>)
 
 Inertial switches or “g-switches” are installed on bodies A, B, and C to sense any over-speed condition in the gimbal assemblies.  The switches are set to actuate at 2.1 g’s.  For Axis #2, limit switches and mechanical stops are provided at the safe limit of travel.  When any of these normally closed switches sense a high angular rate condition, they open and thereby cause a relay to turn off power to the controller box.  When this power is lost, the fail-safe brakes (power-on-to-release type) at Axes #3 and #4 engage.  Also, upon loss of power, the windings of Motor #1 and #2 have shorted, thereby causing electromechanical damping.  Thus, all axes are actively slowed and stopped whenever an over-speed or over-travel condition is detected.
 
@@ -52,7 +52,7 @@ Metal slip rings are included at each gimbal axis to allow continuous angular mo
 
 In the configuration used in the experiment, gimbal Axis #3 is locked ($$\omega_3$$ = 0), so that bodies A and B become one and the same (see Fig. 3.4).  The resulting plant is useful for demonstrations of gyroscopic torque action where the position and rate, $$q_4$$ and $$\omega_4$$, may be controlled by rotating gimbal #2 while the rotor is spinning.  Figure 3.5 shows the coordinate system used for this model.
 
-![Figure 3.4: Gimbal # 3 Locked, All Others Free](<../.gitbook/assets/image (38).png>)
+![Figure 3.4: Gimbal # 3 Locked, All Others Free](<../.gitbook/assets/image (31).png>)
 
 ### Basic Equations
 
@@ -96,7 +96,7 @@ $$
 
 where $$T_1$$ and $$T_2$$ are the applied torques about Axes #1 and #2, respectively (see Fig. 3.5).
 
-![Figure 3.5: Coordinate Frame Definitions](<../.gitbook/assets/image (81).png>)
+![Figure 3.5: Coordinate Frame Definitions](../.gitbook/assets/image.png)
 
 The components of the angular momentum vector $$\vec{H}$$ and the angular velocity vector $$\vec{\omega}_F$$ can be written as
 
@@ -171,7 +171,7 @@ $$
 
 The objective is to design a controller for regulation and control of the angular position $$q_4$$ using the gimbal torque $$T_2$$ . This mimics the following problem: Given a spacecraft with a momentum gyro, we would like to regulate and control the spacecraft attitude ($$q_4$$) using the gimbal torque ($$T_2$$) of the gyroscope. In this lab, the position of Axis #4, $$q_4$$ , is controlled by torquing the Axis #2 motor.  This is accomplished here with the use of a technique known as successive loop closure.  First, a rate feedback loop around $$\omega_2$$ is closed to damp the nutation mode of the gyroscope.  Subsequently, an outer loop is closed to control $$q_4$$.  The block diagram for this process can be seen in Figure 3.6.
 
-![Figure 3.6: Successive Loop Closure Control Scheme](<../.gitbook/assets/image (57).png>)
+![Figure 3.6: Successive Loop Closure Control Scheme](<../.gitbook/assets/image (40).png>)
 
 The equations defining the numerators and denominators in the block diagram are as follows.
 
@@ -314,7 +314,7 @@ This test ensures if everything is sound mechanically, electrically, and in the 
 4. Ensure Axis 2 is perpendicular to the platform base and Axis 3 by using the spirit level app of a phone app, making small adjustments by hand (with the brakes on).
 5. It is not critical where Axis 4 is located since the controller will be doing a relative angle maneuver.
 
-![Figure 3.7: Initial gyroscope orientation as viewed from the front (labels the correct way up) ](<../.gitbook/assets/image (11).png>)
+![Figure 3.7: Initial gyroscope orientation as viewed from the front (labels the correct way up) ](<../.gitbook/assets/image (111).png>)
 
 ### &#xD;Controller Setup
 
@@ -323,7 +323,7 @@ This test ensures if everything is sound mechanically, electrically, and in the 
 1. Go to the `Data` menu and click on _Setup Data Acquisition_.
 2. Be sure that the selected variables to log match those below. When finished, hit OK to exit this menu.
 
-![](<../.gitbook/assets/image (22).png>)
+![](<../.gitbook/assets/image (109).png>)
 
 #### Initialize Rotor
 

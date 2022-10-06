@@ -17,7 +17,7 @@ This laboratory experiment is designed to give the students a clear understandin
 
 #### Part C involves implementation and evaluation of the controller designed in Part B. &#x20;
 
-![](<../.gitbook/assets/image (76).png>)
+![](<../.gitbook/assets/image (70).png>)
 
 ## Part A: Modeling
 
@@ -41,7 +41,7 @@ $$
 
 where $$K_m = k_1\Phi_f k_2$$ .
 
-![Figure 2.1: The instrumented DC motor experiment used in this lab](../.gitbook/assets/DC\_motor.jpg)
+![Figure 2.1: The instrumented DC motor experiment used in this lab](../.gitbook/assets/dc\_motor.jpg)
 
 When the armature winding rotates in a magnetic field, a back voltage, $$V_b$$ (back electromotive force (EMF) voltage) is generated that is proportional to the rate of change of the flux passing through the winding, and hence, it is also proportional to the rotor speed. Therefore, it follows that
 
@@ -51,7 +51,7 @@ $$
 
 A schematic of the electrical and mechanical parts of the motor are shown in Fig. 2.2.
 
-![Figure 2.2: Schematic of a typical DC motor.](<../.gitbook/assets/image (63).png>)
+![Figure 2.2: Schematic of a typical DC motor.](<../.gitbook/assets/image (33).png>)
 
 From the electric circuit of the armature we have
 
@@ -122,7 +122,7 @@ $$
 
 Figure 2.3 below shows a block diagram representation of the DC motor system.
 
-![Figure 2.3: Block diagram of the DC motor](<../.gitbook/assets/image (4).png>)
+![Figure 2.3: Block diagram of the DC motor](<../.gitbook/assets/image (64).png>)
 
 It is of interest to note that $$K_m$$ is related to $$K_b$$. This can be shown by considering the power balance in steady state. The power input to the motor is
 
@@ -160,7 +160,7 @@ $$
 
 Thus, we have reduced the DC motor to a first-order system as shown in Fig. 2.4. The theoretical values of the DC gain and time constant ($$\tau_m$$) are given by (2.9) and (2.10). The DC gain and time constant values can also be determined experimentally, as shown in the next section.
 
-![Figure 2.4: Simplified block diagram of a DC motor.](<../.gitbook/assets/image (103).png>)
+![Figure 2.4: Simplified block diagram of a DC motor.](<../.gitbook/assets/image (5).png>)
 
 ### First-Order System Response to a Step Input
 
@@ -170,7 +170,7 @@ $$
 y_{ss} = \lim_{t \to \infty}y(t)  = \lim_{s \to 0}sY(s)
 $$
 
-![Figure 2.5: Typical First Order System Response for a Step Input](<../.gitbook/assets/image (47).png>)
+![Figure 2.5: Typical First Order System Response for a Step Input](<../.gitbook/assets/image (69).png>)
 
 The time constant $$\tau_m$$ is the time at which the output reaches 63.2% of its steady-state value.
 
@@ -180,7 +180,7 @@ The time constant $$\tau_m$$ is the time at which the output reaches 63.2% of it
 
 2. In the MATLAB directory navigation bar, go to **C:\Users\Public\AE4610\DC Motor\DCMotor**. Locate the file **DCMotor\_OL.mdl** under the Current Folder section and open it. This is the block diagram for this part of the experiment.\
 
-3.  To build the model, click down arrow on **Monitor & Tune** under Hardware tab and then **Build** **for monitoring** ![](<../.gitbook/assets/image (39).png>). This generates the controller code in the MATLAB window. If you encounter build issues, this is usually due to file permission conflicts caused by having multiple users share the same files. To resolve this, have the TA help you create a clean installation by deleting the DC Motor folder and unzipping the backed up "DC Motor - Unzip Me For Clean Install" folder (be sure to recover any stored data in the original folder before deleting).
+3.  To build the model, click down arrow on **Monitor & Tune** under Hardware tab and then **Build** **for monitoring** ![](<../.gitbook/assets/image (117).png>). This generates the controller code in the MATLAB window. If you encounter build issues, this is usually due to file permission conflicts caused by having multiple users share the same files. To resolve this, have the TA help you create a clean installation by deleting the DC Motor folder and unzipping the backed up "DC Motor - Unzip Me For Clean Install" folder (be sure to recover any stored data in the original folder before deleting).
 
 
 4.  Open the scope **Theta\_dot**.
@@ -192,7 +192,7 @@ The time constant $$\tau_m$$ is the time at which the output reaches 63.2% of it
 6.  For the braked position of the magnetic brake (1 position), choose 3 different input voltages (< 5 volts).&#x20;
 
 
-7.  Press **Connect** <img src="../.gitbook/assets/image (61).png" alt="" data-size="line"> button under Monitor & Tune and then press **Start** <img src="../.gitbook/assets/image (48).png" alt="" data-size="line">. Run the motor with a step input of the selected input voltage for 10 seconds.
+7.  Press **Connect** <img src="../.gitbook/assets/image (121).png" alt="" data-size="line"> button under Monitor & Tune and then press **Start** <img src="../.gitbook/assets/image (119).png" alt="" data-size="line">. Run the motor with a step input of the selected input voltage for 10 seconds.
 
 
 8.  Save the data by selecting all the data in the MATLAB window, right click and select **Save as**, go to the folder **C:\Users\Public\AE4610\DC Motor\Lab Data\<Your group number>** and save the motor angular velocity data with different names. For example, `DCMotor_OL_Data_3V.`&#x20;
@@ -266,7 +266,7 @@ $$
 
 we notice that the proportional gain $$K_p$$ affects the natural frequency (and hence the bandwidth) of the closed-loop system.
 
-![Figure 2.6: Closed-loop block diagram for the position control of a DC motor using a proportional controller](<../.gitbook/assets/image (86).png>)
+![Figure 2.6: Closed-loop block diagram for the position control of a DC motor using a proportional controller](<../.gitbook/assets/image (92).png>)
 
 ####
 
@@ -278,7 +278,7 @@ $$
 \frac{\theta(s)}{\theta_c(s)} = \frac{AK_p}{\tau_m s^2 + (1 + AK_d)s + AK_p} = \frac{\cfrac{AK_p}{\tau_m}}{s^2 + \cfrac{(1 + AK_d)}{\tau_m}s + \cfrac{AK_p}{\tau_m}}
 $$
 
-![Figure 2.7: Closed-loop block diagram for the position control of a DC motor using a proportional-plus-derivative (PD) controller.](<../.gitbook/assets/temp (3).PNG>)
+![Figure 2.7: Closed-loop block diagram for the position control of a DC motor using a proportional-plus-derivative (PD) controller.](../.gitbook/assets/temp.png)
 
 Comparing the above transfer function with the standard form for a second-order system, we notice that the derivative gain $$K_d$$ affects the damping while the proportional gain $$K_p$$ affects the natural frequency of the closed-loop system.
 
@@ -288,7 +288,7 @@ Comparing the above transfer function with the standard form for a second-order 
 
 The block diagram of a DC motor with an inner loop angular rate (i.e., derivative) feedback and an outer loop angular position error plus integral of angular position error (i.e., proportional plus integral) feedback is shown in Fig. 2.8.&#x20;
 
-![Figure 2.8: Closed-loop block diagram for the position control of the DC motor using a proportional-plus-Integral-plus-derivative (PID) controller](<../.gitbook/assets/image (34).png>)
+![Figure 2.8: Closed-loop block diagram for the position control of the DC motor using a proportional-plus-Integral-plus-derivative (PID) controller](<../.gitbook/assets/image (87).png>)
 
 From Fig. 2.8, the open-loop transfer function $$GH$$ becomes
 
@@ -337,7 +337,7 @@ The closed-loop DC motor system must meet the following specifications.
     \
     The compensator transfer function in **Control System Designer** or **rltool** in this step is of the form shown below. Use it to determine the gains $$K_p$$ and $$K_d$$. Save these gains.\
     \
-    &#x20;                                                      <img src="../.gitbook/assets/temp (2).PNG" alt="" data-size="original">                                                 \
+    &#x20;                                                      <img src="../.gitbook/assets/temp (1).png" alt="" data-size="original">                                                 \
 
 
 
@@ -346,7 +346,7 @@ The closed-loop DC motor system must meet the following specifications.
 
 
 7. Consider a PID controller. Using $$K_p$$ and $$K_d$$ values you have obtained from the previous steps, edit the compensator (i.e. add poles and zeros to match the format below) to include integral feedback with the integral gain set to a small value (i.e., $$K_i$$ is roughly 0.05).  The controller transfer function for this step is\
-   &#x20;                                                  <img src="../.gitbook/assets/temp.JPG" alt="" data-size="original"> \
+   &#x20;                                                  <img src="../.gitbook/assets/temp.jpg" alt="" data-size="original"> \
 
 8.  Readjust the proportional and derivative gains (if necessary, by modifying the zeros, not the overall gain, $$K_i$$) such that bandwidth and phase margin specs are met.&#x9;
 
@@ -400,7 +400,7 @@ The following is a list of the required equipment to perform this experiment:
 
 3. _**P Controller Test**_: To understand the behaviour of a Proportional controller, implement a P controller by typing the values for $$K_d$$ and $$K_i$$ to 0 in the command window. Set $$K_p$$ as 10.\
 
-4.  To build the model, click down arrow on **Monitor & Tune** under Hardware tab and then **Build** **for monitoring** ![](<../.gitbook/assets/image (39).png>).&#x20;
+4.  To build the model, click down arrow on **Monitor & Tune** under Hardware tab and then **Build** **for monitoring** ![](<../.gitbook/assets/image (117).png>).&#x20;
 
 
 5.  Open the _**Theta Command**_ block and make sure that the Final value is equal to **5/Kp**. This will limit the input to the motor to be less than a preset limit of 5 volts.
@@ -412,7 +412,7 @@ The following is a list of the required equipment to perform this experiment:
 7.  Turn on the power supply.
 
 
-8.  Press **Connect** <img src="../.gitbook/assets/image (61).png" alt="" data-size="line"> button under Monitor & Tune and then press **Start** <img src="../.gitbook/assets/image (48).png" alt="" data-size="line">. Run the motor with a step input of the selected input voltage for 10 seconds.
+8.  Press **Connect** <img src="../.gitbook/assets/image (121).png" alt="" data-size="line"> button under Monitor & Tune and then press **Start** <img src="../.gitbook/assets/image (119).png" alt="" data-size="line">. Run the motor with a step input of the selected input voltage for 10 seconds.
 
 
 
